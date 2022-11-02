@@ -1,0 +1,23 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.titulo{
+    background-color: red;
+    color: white;
+    padding: 2rem;
+}
+.instrucciones{
+    margin: 2rem;
+    font-size: 1rem;
+}
+.intro{
+    display: grid;
+    place-items: center;
+}
+#comenzar{
+    padding: 0.5rem;
+    font-size: 1rem;
+}
