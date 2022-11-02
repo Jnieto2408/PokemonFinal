@@ -18,6 +18,17 @@ let pokeInicial = () => {
             primerPokemon(datos);
         })
         .catch(error => console.log(error))
+    rival();
+}
+let rival = () => {
+    let id = Math.floor(Math.random() * 150) + 1;
+    const finalUrl = url + id; //Aqui combinamos url de arriba con numero aleatorio.
+    fetch(finalUrl)
+        .then(respuesta => respuesta.json())
+        .then((datos) => {
+            console.log(datos)
+        })
+        .catch(error => console.log(error))
 }
 /* Declaramos funcion para mostrar pokemon inicial*/
 let primerPokemon = (datos) => {
@@ -34,28 +45,28 @@ let primerPokemon = (datos) => {
     const statSpeed = datos.stats[5].base_stat;
     console.log("Velocidad", statSpeed);
     pokemon.innerHTML = `
-    <p class="hp">
-        <span>HP</span>
-        ${hp}
-    </p>
-    <img src=${imgSrc} />
-    <h2>${pokeNombre}</h2>
-    <div class="types">
-        
-    </div>
-    <div class="stats">
-        <div>
-        <h3>${statAttack}</h3>
-        <p>Attack</p>
+        <h3>Pokemon Inicial</h3>
+        <div class="pokemon">
+            <p class="hp">
+                <span>HP</span>
+                ${hp}
+            </p>
+            <img src=${imgSrc} />
+            <h2>${pokeNombre}</h2>
+            <div class="stats">
+                <div>
+                <h3>${statAttack}</h3>
+                <p>Attack</p>
+                </div>
+                <div>
+                <h3>${statDefense}</h3>
+                <p>Defense</p>
+                </div>
+                <div>
+                <h3>${statSpeed}</h3>
+                <p>Speed</p>
+                </div>
+            </div>
         </div>
-        <div>
-        <h3>${statDefense}</h3>
-        <p>Defense</p>
-        </div>
-        <div>
-        <h3>${statSpeed}</h3>
-        <p>Speed</p>
-        </div>
-    </div>
   `;
 }

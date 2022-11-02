@@ -22,31 +22,38 @@
     font-size: 1rem;
 }
 .batalla{
+    width: 100vw;
+    margin-top: 2rem;
     display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
-.batalla .cartaPokemon{
+.pokemon{
     border: 1px solid black;
 }
-.batalla .cartaPokemon div .hp{
+.batalla .cartaPokemon h3{
+    text-align: center;
+}
+.batalla .cartaPokemon div div .hp{
     text-align: end;
     margin: 1rem;
     font-size: 1rem;
     font-weight: bold;
 }
-.batalla .cartaPokemon div img{
+.batalla .cartaPokemon div div img{
     max-height: 200px;
     width: 180px;
     margin: 1rem;
 }
-.batalla .cartaPokemon div h2{
+.batalla .cartaPokemon div div h2{
     text-align: center;
     margin: 1rem;
 }
-.batalla .cartaPokemon div .stats{
+.batalla .cartaPokemon div div .stats{
     display: flex;
     justify-content: space-between;
 }
-.batalla .cartaPokemon div .stats div{
+.batalla .cartaPokemon div div .stats div{
     display: flex;
     flex-direction: column;
     align-items: center;
